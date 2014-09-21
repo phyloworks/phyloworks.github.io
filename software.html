@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Heath Lab – EEOB – Iowa State University</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="navbar-static-top.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="h.html">Heath Lab @ ISU</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="h.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li class="active"><a href="software.html">Software</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="resources/links.html">Links</a></li>
+                <li><a href="resources/collaborators.html">Collaborators</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header"><font color="white">Teaching</font></li>
+                <li><a href="resources/workshops.html">Workshops</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header"><font color="white">Study @ ISU</font></li>
+                <li><a href="resources/gradschool.html">Graduate Programs</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://www.eeob.iastate.edu/">EEOB</a></li>
+            <li><a href="http://www.iastate.edu/">ISU</a></li>
+            <li><a href="http://www.treethinkers.org/blog">Blog</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+    <div class="container">
+
+
+
+	<div class="page-header">
+        <h1 id="what">Software</h1>
+    </div>
+      <div class="jumbotron">
+        <p>My primary approach to developing phylogenetic tools is to apply new statistical models as priors using Bayesian inference methods. The implementation of complex models in a Bayesian 
+		framework provides a flexible way to model evolutionary processes and obtain reliable estimates of biological parameters. When coupled with numerical methods––such as Markov chain Monte Carlo (MCMC)––for 
+		approximating the posterior probability distribution of parameters, Bayesian inference methods can be extremely powerful and have revolutionized the range of evolutionary questions that can be tackled.
+		</p>
+		<p>
+		Statistical phylogenetic inference is heavily computational, thus the software I develop is written in C++ (a compiled language).
+		I also write small accessory programs for summarizing MCMC, simulation, or plotting data in Python. 
+		</p>
+		<p>
+		I am dedicated to contributing open-source software products for academic research. My current software projects are available on <a href="https://github.com/trayc7">GitHub</a>.
+		</p>
+      </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">RevBayes
+                </h2>
+			  <div class="well">
+			  	<p><a href="https://github.com/revbayes/revbayes"><img src="images/github.png" alt="" width="3%" /> https://github.com/revbayes/revbayes</a>
+			  	</p>
+				<p>RevBayes is a Bayesian inference framework. It is primarily for phylogenetic inference using integrative models
+				and MCMC. 
+				</p>
+			  </div>
+           </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">DPPDiv
+                </h2>
+			  <div class="well">
+				<p><a href="https://github.com/trayc7/FDPPDIV"><img src="images/github.png" alt="" width="3%" /> https://github.com/trayc7/FDPPDIV</a>
+			  	</p>
+			  	<p>DPPDiv is a program for estimating species divergence times and lineage-specific substitution rates on a fixed topology. The prior on branch rates is a Dirichlet process prior which clusters branches into distinct rate classes. Alternative priors including the global molecular clock and the independent rates model are also available. The priors on node ages include the birth-death (and Yule) model and the uniform distribution.
+				</p>
+				<p>
+				DPPDiv user discussion email list: <a href="https://groups.google.com/d/forum/dppdiv-users">https://groups.google.com/d/forum/dppdiv-users</a>
+				</p>
+			<h4>Descriptions of models and implementation</h4>
+
+			<ul>
+				<li><b>Heath</b>, Huelsenbeck, Stadler. 2014. <a href="http://www.pnas.org/content/111/29/E2957.abstract">The fossilized birth-death process for coherent calibration of divergence-time estimates</a>. <i>Proceedings of the National Academy of Sciences</i> 111(29):E2957–E2966. [<a href="http://arxiv.org/abs/1310.2968">arXiv preprint arXiv:1310.2968</a>] </li>
+				<li><b>Heath</b>, Holder, Huelsenbeck. 2012. <a href="http://mbe.oxfordjournals.org/content/29/3/939">A Dirichlet process prior for estimating lineage-specific substitution rates.</a> Molecular Biology and Evolution 29:939-955.</li>
+				<li><b>Heath</b>. 2012. <a href="http://sysbio.oxfordjournals.org/content/61/5/793">A hierarchical Bayesian model for calibrating estimates of species divergence times.</a> Systematic Biology, 61:793-809.</li>
+				<li>Flouri, Stamatakis. 2012. <a href="http://sco.h-its.org/exelixis/rrdr2012-7.php">An Improvement to DPPDIV.</a> Heidelberg Institute for Theoretical Studies, Exelixis-RRDR-2012-7. (Technical report on optimization and parallelization of DPPDiv)</li>
+				<li>Darriba, Aberer, Flouri, <b>Heath</b>, Izquierdo-Carrasco, Stamatakis: "Boosting the performance of Bayesian divergence time estimation with the Phylogenetic Likelihood Library", accepted for publication at IPDPS 2013, Boston, USA, 2013. (peer-reviewed conference paper) [<a href="http://sco.h-its.org/exelixis/rrdr2013-2.php">pdf</a>]</li>
+			<ul/>
+			</p>
+			  </div>
+           </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">FossilGen
+                </h2>
+			  <div class="well">
+			  <p><a href="https://github.com/trayc7/FossilGen"><img src="images/github.png" alt="" width="3%" /> https://github.com/trayc7/FossilGen</a>
+			  	</p>
+				<p>FossilGen is a program for simulating phylogenies and fossil occurrence times under the serial-sampled birth-death process of Stadler (J. Ther. Biol, 2010).</p>
+			  </div>
+           </div>
+        </div>
+
+<!-- 
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Other projects
+                </h2>
+			  	list
+           </div>
+        </div>
+ -->
+
+
+        <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                	<center>
+                    <p><a href="http://phylopic.org/image/6c9cb19d-1d8a-4215-88ba-d49cd4917a5e/"><img src="images/arrow.png" alt="" width="7%" /></a><br><br>
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" width="7%" /></a><br />Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p></center>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

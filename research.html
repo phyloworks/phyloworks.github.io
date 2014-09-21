@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Heath Lab – EEOB – Iowa State University</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="navbar-static-top.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="h.html">Heath Lab @ ISU</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="h.html">Home</a></li>
+            <li class="active"><a href="research.html">Research</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="software.html">Software</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="resources/links.html">Links</a></li>
+                <li><a href="resources/collaborators.html">Collaborators</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header"><font color="white">Teaching</font></li>
+                <li><a href="resources/workshops.html">Workshops</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header"><font color="white">Study @ ISU</font></li>
+                <li><a href="resources/gradschool.html">Graduate Programs</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://www.eeob.iastate.edu/">EEOB</a></li>
+            <li><a href="http://www.iastate.edu/">ISU</a></li>
+            <li><a href="http://www.treethinkers.org/blog">Blog</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+    <div class="container">
+
+
+
+	<div class="page-header">
+        <h1 id="what">Research</h1>
+    </div>
+      <div class="jumbotron">
+        <p>I develop methods that broaden our understanding of the evolutionary processes responsible for generating the patterns we observe in the tree of life. Specifically, I develop novel computational and 
+			statistical methods for estimating evolutionary parameters in a phylogenetic context. 
+			I evaluate the properties and performance of phylogenetic methods using biological data sets and through the development of new simulation tools. 
+			Additionally, my collaborators and I apply phylogenetic techniques to empirical data sets to understand patterns of biodiversity, morphological evolution, and historical biogeography.</p>
+      </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">Modeling variation in rates of character evolution
+                </h3>
+			  <div class="well">
+				<p>Rates of Molecular Evolution — Accurate estimates of species divergence times are vital 
+				to answering questions about historical biogeography, estimating diversification rates, and 
+				identifying the causes of variation in rates of molecular evolution. However, obtaining reliable 
+				divergence time estimates is confounded by the fact that the rate of evolution and time are intrinsically 
+				linked. I am currently working on new models for estimating branch lengths in units proportional to time 
+				without assuming a strict molecular clock. Our understanding of how substitution rates change over time 
+				is still underdeveloped. My research in this field is aimed at identifying models that accommodate rate 
+				change resulting from different processes. Such flexible models can provide more accurate estimates of 
+				species divergence times. 
+				I developed a model for estimating lineage-specific substitution rates that employs a Dirichlet 
+				process prior (DPP) for modeling mixtures of data. Under this model, branches of a phylogenetic tree are 
+				clustered into specific rate classes and the number of different rate classes and their associated rates 
+				are treated as random variables. Thus, a strict molecular clock and a model where each lineage evolves 
+				independently at a different rate are special cases of this model. Analyses of simulated data show that 
+				divergence times and branch rates are more accurate under the DPP when compared with alternative models 
+				for substitution rate variation. Furthermore, Bayesian inference under this model can identify how 
+				phylogenetic lineages are partitioned according to substitution rate, information unavailable under 
+				alternative priors. (See <a href="http://mbe.oxfordjournals.org/content/29/3/939">Heath et al., MBE 2012</a>)
+				</p>
+				<p>
+				Rates of Morphological Evolution — The DPP model for substitution-rate variation extends naturally 
+				to characterize how rates of morphological change vary among lineages. This work is in collaboration with PhD students 
+				Mike May (UC–Davis) and Michael Landis (UC–Berkeley), as well as Brian Moore (UC-Davis). 
+				We are developing a hierarchical Bayesian method 
+				to uncover patterns of phenotypic evolution. Under this model, we assume that the rate of continuous 
+				trait evolution (assuming Brownian motion) varies across the tree according to a Dirichlet process. 
+				We are implementing this novel method in a program that will allow for joint estimation of phenotypic 
+				rates and divergence times, thus accommodating uncertainty in branch times and other phylogenetic 
+				parameters. This integrative approach will allow us to evaluate correlated changes in rates of molecular 
+				and morphological evolution.
+				</p>
+			  </div>
+           </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">Combining Paleontological and Neontological Data for Phylogenetic Inference
+                </h3>
+			  <div class="well">
+				<p>Historical observations in the form of fossil occurrence times or other geological data are 
+				fundamental components necessary for inferring the absolute timing of speciation events. The 
+				common approach to time calibration taken by most neontologists is to assign minimum age estimates, 
+				based on fossil specimens, to nodes within their group of interest. However, we can rarely assign 
+				fossils to nodes of a tree without error, and much of the information associated with fossil taxa is 
+				lost when we try to represent the fossil record as a single time estimate applied to a single internal node.
+				</p>
+				<h4>The Fossilized Birth-Death Process</h4>
+				<p>
+				In collaboration with Tanja Stadler (ETH Zürich) and John Huelsenbeck (UC–Berkeley), I 
+				developed a unified extant and extinct- species diversification model that eliminates the 
+				need for the ad hoc prior densities that are common practice in Bayesian phylogenetics. The 
+				‘fossilized birth-death’ (FBD) process is a model for calibrating divergence-time estimates 
+				in a Bayesian framework and explicitly acknowledges that extant species and fossils are representatives 
+				of the same macroevolutionary process. Under this model, we can estimate internal node ages conditional 
+				on a tree of extant taxa and set of fossil occurrence times. We developed novel reversible-jump MCMC 
+				methods to marginalize over realizations of this process and implemented them in a recent version of DPPDiv. 
+				This model improves upon standard approaches for calibrating phylogenies with fossil data by allowing for 
+				inclusion of all available fossils and providing coherent measures of statistical uncertainty. (See <a href="http://www.pnas.org/content/111/29/E2957.abstract">Heath et al., PNAS 2014</a>)
+				</p>
+				<h4>Fossil Phylogenetics with Trilobites as a Model System</h4>
+				<p>
+				For some taxonomic groups, the fossil record provides a wealth of information about the evolution of 
+				morphological characters and lineage diversification. Because of this, the development of methods for 
+				fully integrating information from fossil specimens into phylogenetic analyses is a critical area of 
+				research. Toward this end, I am collaborating with Drs. Mark Holder and Bruce Lieberman (U. Kansas) 
+				to develop improved methods for likelihood-based phylogenetic analysis of morphological data with an 
+				emphasis on fossil taxa. As part of this project, I will integrate complex models of morphological 
+				evolution and stratigraphic information into Bayesian methods for phylogenetic inference. 
+				This work will build on the FBD model and estimate the explicit phylogenetic relationships of fossil 
+				organisms. Furthermore, we will extend the diversification models to account for our current 
+				understanding of the rock record and stratigraphy. We will harness the rich fossil record of the 
+				Trilobita, specifically the well-studied groups Olenellina and Cheiruridae, to evaluate and test 
+				new phylogenetic methods. Ultimately, this work will expand our understanding of the patterns of 
+				diversification and morphological evolution in this group. Furthermore, our methods are naturally 
+				applicable to data sets combining both modern and fossil species, thus contributing to current 
+				research in molecular phylogenetics and macroevolution. This project is funded by NSF grant 
+				<a href="http://phylo.bio.ku.edu/fossil/">DEB-1256993</a>.
+				</p>
+			  </div>
+           </div>
+        </div>
+
+
+
+        <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                	<center>
+                    <p><a href="http://phylopic.org/image/6c9cb19d-1d8a-4215-88ba-d49cd4917a5e/"><img src="images/arrow.png" alt="" width="7%" /></a><br><br>
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" width="7%" /></a><br />Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p></center>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
