@@ -1,0 +1,56 @@
+
+### simulate observations from LN(0.4118972, 0.75)
+### this has a mean of 2
+observations <- rlnorm(4, 0.4118972, 0.75) 
+
+### constant nodes for the Gamma prior on the mean
+alpha <- 3.0
+beta <- 1.0
+### stochastic node for the mean with a Gamma prior
+M ~ dnGamma(alpha, beta)
+
+### constant node for the rate of the Exponential prior on
+### the standard deviation
+lambda <- 1.0
+### stochastic node for the standard deviation w/ a Exp. prior
+sigma ~ dnExponential(lambda)
+
+### deterministic node computing the variance
+var := sigma * sigma
+### deterministic node computing mu
+mu := ln(M) - (var * 0.5)
+
+### a plate over the number of observations
+### this creates the stochastic node representing each obsv.
+### and fixes (clamps) the node to the observed value
+N <- observations.size()
+for(i in 1:N){
+   x[i] ~ dnLnorm(mu, sigma)
+   x[i].clamp(observations[i])
+}
+
+### a workspace object to define the model graph
+mymodel = model(M)
+
+### a model object has a method to create a file that can be read by the program
+### GraphViz so that you can view the model DAG http://www.graphviz.org/
+mymodel.graph("lnorm_graph.dot")
+
+### a workspace object where each MCMC proposal (move) is defined for each parameter
+### in a vector
+moves[1] = mvSlide(M,delta=1,tune=true,weight=5)
+moves[2] = mvScale(sigma,lambda=0.5,tune=true,weight=5)
+
+### a workspace object where the different output types (to file and screen) are 
+### specified in a vector
+monitors[1] = mnModel(filename="output/lnorm_posterior.log",printgen=10, separator = TAB)
+monitors[2] = mnScreen(printgen=1000, M, sigma)
+
+### a workspace object for specifying the conditions of the MCMC run
+mymcmc = mcmc(mymodel, monitors, moves)
+
+### perform a pre-run burn-in to tune the moves (these cycles are not recorded)
+mymcmc.burnin(generations=10000,tuningInterval=1000)
+
+### execute the MCMC and log to file
+mymcmc.run(generations=30000)
