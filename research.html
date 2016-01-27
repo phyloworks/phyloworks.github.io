@@ -73,51 +73,12 @@
         <h1 id="what">Research</h1>
     </div>
       <div class="jumbotron">
-        <p>I develop methods that broaden our understanding of the evolutionary processes responsible for generating the patterns we observe in the tree of life. Specifically, I develop novel computational and 
+        <p>Our lab develops methods that broaden our understanding of the evolutionary processes responsible for generating the patterns we observe in the tree of life. Specifically, we develop novel computational and 
 			statistical methods for estimating evolutionary parameters in a phylogenetic context. 
-			I evaluate the properties and performance of phylogenetic methods using biological data sets and through the development of new simulation tools. 
-			Additionally, my collaborators and I apply phylogenetic techniques to empirical data sets to understand patterns of biodiversity, morphological evolution, and historical biogeography.</p>
+			We evaluate the properties and performance of phylogenetic methods using biological data sets and through the development of new simulation tools. 
+			Additionally, with collaborators, we apply phylogenetic techniques to empirical data sets to understand patterns of biodiversity, morphological evolution, and historical biogeography.</p>
       </div>
 
-        <div class="row">
-            <div class="col-lg-12">
-                <h3 class="page-header">Modeling Variation in Rates of Character Evolution
-                </h3>
-			  <div class="well">
-				<p>Rates of Molecular Evolution — Accurate estimates of species divergence times are vital 
-				to answering questions about historical biogeography, estimating diversification rates, and 
-				identifying the causes of variation in rates of molecular evolution. However, obtaining reliable 
-				divergence time estimates is confounded by the fact that the rate of evolution and time are intrinsically 
-				linked. I am currently working on new models for estimating branch lengths in units proportional to time 
-				without assuming a strict molecular clock. Our understanding of how substitution rates change over time 
-				is still underdeveloped. My research in this field is aimed at identifying models that accommodate rate 
-				change resulting from different processes. Such flexible models can provide more accurate estimates of 
-				species divergence times. 
-				I developed a model for estimating lineage-specific substitution rates that employs a Dirichlet 
-				process prior (DPP) for modeling mixtures of data. Under this model, branches of a phylogenetic tree are 
-				clustered into specific rate classes and the number of different rate classes and their associated rates 
-				are treated as random variables. Thus, a strict molecular clock and a model where each lineage evolves 
-				independently at a different rate are special cases of this model. Analyses of simulated data show that 
-				divergence times and branch rates are more accurate under the DPP when compared with alternative models 
-				for substitution rate variation. Furthermore, Bayesian inference under this model can identify how 
-				phylogenetic lineages are partitioned according to substitution rate, information unavailable under 
-				alternative priors. (See <a href="http://mbe.oxfordjournals.org/content/29/3/939">Heath et al., MBE 2012</a>)
-				</p>
-				<p>
-				Rates of Morphological Evolution — The DPP model for substitution-rate variation extends naturally 
-				to characterize how rates of morphological change vary among lineages. This work is in collaboration with PhD students 
-				Mike May (UC–Davis) and Michael Landis (UC–Berkeley), as well as Brian Moore (UC-Davis). 
-				We are developing a hierarchical Bayesian method 
-				to uncover patterns of phenotypic evolution. Under this model, we assume that the rate of continuous 
-				trait evolution (assuming Brownian motion) varies across the tree according to a Dirichlet process. 
-				We are implementing this novel method in a program that will allow for joint estimation of phenotypic 
-				rates and divergence times, thus accommodating uncertainty in branch times and other phylogenetic 
-				parameters. This integrative approach will allow us to evaluate correlated changes in rates of molecular 
-				and morphological evolution.
-				</p>
-			  </div>
-           </div>
-        </div>
 
         <div class="row">
             <div class="col-lg-12">
@@ -144,6 +105,7 @@
 				This model improves upon standard approaches for calibrating phylogenies with fossil data by allowing for 
 				inclusion of all available fossils and providing coherent measures of statistical uncertainty. (See <a href="http://www.pnas.org/content/111/29/E2957.abstract">Heath et al., PNAS 2014</a>)
 				</p>
+<!-- 
 				<h4>Fossil Phylogenetics with Trilobites as a Model System</h4>
 				<p>
 				For some taxonomic groups, the fossil record provides a wealth of information about the evolution of 
@@ -163,10 +125,63 @@
 				research in molecular phylogenetics and macroevolution. This project is funded by NSF grant 
 				<a href="http://phylo.bio.ku.edu/fossil/">DEB-1256993</a>.
 				</p>
+ -->
 			  </div>
            </div>
         </div>
 
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">Co-Evolution in Figs and Fig Wasps
+                </h3>
+			  <div class="well">
+				<p>In collboration with Dr. <a href="http://www.eeob.iastate.edu/faculty/nason/">John Nason</a> 
+				(Iowa State University), Dr. <a href="http://www.stri.si.edu/english/scientific_staff/staff_scientist/scientist.php?id=15">E. Allen Herre</a> (Smithsonian Tropical Research Institute, Panama), 
+				Dr. <a href="https://scholar.google.com/citations?user=fBVG0lkAAAAJ&hl=en">Charlotte Jandér</a> (Harvard University), 
+				Dr. <a href="http://www.clfs.umd.edu/biology/machadolab/">Carlos Machado</a> (University of Maryland), and 
+				Dr. <a href="http://www.nbb.cornell.edu/neurobio/ragusolab/index.html">Robert Raguso</a> (Cornell University),
+				we are investigating the coevolutionary history of species interactions in 
+				Central American figs and their pollinating (mutualistic) and non-pollinating (antagonistic) 
+				fig wasps. 
+				Figs and their fig wasp pollinators and parasites have co-evolved for ~90 million years to become both highly diverse (>750 species of figs) and ecologically important “keystone” components of tropical forest ecosystems. Figs and wasps have long been assumed to represent a case of strict co-speciation, with highly specific pollinator and parasitic (non-pollinator) wasps identifying appropriate hosts via distinctive volatile chemical signals. More recent studies suggest a more complex scenario, however, involving an evolutionary history punctuated by host-shifts by individual wasp species. Although the wasp associations with fig hosts have been widely studied, the genetic consequences for the host figs of host-shifting pollinators and the mechanisms underlying host recognition remain poorly understood. 
+				</p>
+				<p>
+				This project will fill these gaps by producing robust, detailed, many-gene phylogenies for 14 strangling fig (<i>Ficus</i>) species and their associated pollinating (<i>Pegoscapus</i>) and non-pollinating (<i>Idarnes</i>) fig wasps (~60 species) from the vicinity of Barro Colorado Island, Panama. Using transcriptome sequences, we will target ~300 genes from each of three species per lineage for capture and subsequent Illumina sequencing. Phylogenies will be inferred using Bayesian methods and will enable robust testing of phylogenetic congruence between figs and fig wasps. Further, they will guide population-level genotype by sequencing to test a priori predictions of potential cases of hybridization in the figs and host shifting and race formation in both pollinator and non-pollinator wasps. Combined with quantification of wasp-attracting fig volatiles and fruit-surface chemicals, this work will detect and resolve the genomic consequences of host introgression due to host-shifting pollinator wasps, and link them to the chemical basis of host-recognition.
+				</p>
+				<p>
+				This research will significantly clarify both the patterns and processes underlying the evolutionary ecology of fig and fig wasp interactions. Our standardized, genomic approach is essential for: 1) obtaining robust fig and fig wasp species trees, 2) delimiting fig species and discriminating cases of introgressive gene flow from shared ancestral polymorphism, and 3) linking introgression of figs and their chemical phenotypes to cases of pollinator host shifting. Our community-level approach is also essential to obtain the across-species replication necessary for robust statistical inference of diversification pattern and process across interacting fig and wasp taxa.
+				</p>
+			  </div>
+           </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">Modeling Variation in Rates of Character Evolution
+                </h3>
+			  <div class="well">
+				<p>Rates of Molecular Evolution — Accurate estimates of species divergence times are vital 
+				to answering questions about historical biogeography, estimating diversification rates, and 
+				identifying the causes of variation in rates of molecular evolution. However, obtaining reliable 
+				divergence time estimates is confounded by the fact that the rate of evolution and time are intrinsically 
+				linked. I am currently working on new models for estimating branch lengths in units proportional to time 
+				without assuming a strict molecular clock. Our understanding of how substitution rates change over time 
+				is still underdeveloped. My research in this field is aimed at identifying models that accommodate rate 
+				change resulting from different processes. Such flexible models can provide more accurate estimates of 
+				species divergence times. 
+				I developed a model for estimating lineage-specific substitution rates that employs a Dirichlet 
+				process prior (DPP) for modeling mixtures of data. Under this model, branches of a phylogenetic tree are 
+				clustered into specific rate classes and the number of different rate classes and their associated rates 
+				are treated as random variables. Thus, a strict molecular clock and a model where each lineage evolves 
+				independently at a different rate are special cases of this model. Analyses of simulated data show that 
+				divergence times and branch rates are more accurate under the DPP when compared with alternative models 
+				for substitution rate variation. Furthermore, Bayesian inference under this model can identify how 
+				phylogenetic lineages are partitioned according to substitution rate, information unavailable under 
+				alternative priors. (See <a href="http://mbe.oxfordjournals.org/content/29/3/939">Heath et al., MBE 2012</a>)
+				</p>
+			  </div>
+           </div>
+        </div>
 
 
         <hr>
