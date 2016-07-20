@@ -1,12 +1,13 @@
 
 ### simulate observations from LN(0.4118972, 0.75)
-### this has a mean of 2
-observations <- rlnorm(4, 0.4118972, 0.75) 
+### this has a mean of M = 2
+observations = rlnorm(4, 0.4118972, 0.75) 
 
 ### constant nodes for the Gamma prior on the mean
 alpha <- 3.0
 beta <- 1.0
 ### stochastic node for the mean with a Gamma prior
+### this gamma prior has an expected value of 3 because E(M) = alpha/beta
 M ~ dnGamma(alpha, beta)
 
 ### constant node for the rate of the Exponential prior on
